@@ -79,6 +79,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    align-item: center;
 }
 
 .page-title {
