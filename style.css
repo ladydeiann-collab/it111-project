@@ -30,11 +30,23 @@ header {
     gap: 15px;
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 1200px;
+    height: 1200px;
     object-fit: contain;
     display: block;
+}
+
+.brand h1 {
+    margin: 0;
+    text-align: center;
 }
 
 nav {
@@ -468,4 +480,20 @@ footer {
 
 .picture img {
     transition: transform 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .brand {
+        gap: 8px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .brand h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
 }
