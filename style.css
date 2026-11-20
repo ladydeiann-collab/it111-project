@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6;
+    color: #78545B;
+    background-color: #f8ede7;
+    font-size: medium;
+    text-align: justify;
+}
+
+header {
+    background-color: #d3b6b7;
+    color: #5e3f45;
+    text-align: center;
+    padding: 24px 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    background: #d3b6b7;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #ffffff;
+}
+
+nav a {
+    color: #5e3f45; 
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #775c62;
+    color: #ffffff;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #d3b6b7;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.container article {
+  background-color: #F4EBF9;
+  margin: 0px;
+  padding: 20px;
+  font-size: 16px;
+  flex: 1 1 250px;
+  min-width: 0;
+  border-radius: 8px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #5e3f45;
+    background-color: #fffafa;
+    color: #5e3f45;
+    text-align: left;
+}
+
+thead {
+    background-color: #d3b6b7;
+    color: #5e3f45;
+}
+
+th, td {
+    border: 1px solid #5e3f45;
+    padding: 15px;
+}
+
+th {
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+}
+
+.gallery {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    margin: auto;
+}
+
+.picture {
+    display: block;
+    width: 200px;
+    height: 220px;
+    position: absolute;
+    transition: 0.4s ease;
+}
+
+.picture:first-child {
+    margin-left: 0;
+}
+
+.gallery .picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #ffffff ;
+}
+
+.p1 {
+    left: 0;
+    top: 65px;
+    z-index: 1;
+    transform: scale(0.8);
+}
+
+.p2 {
+    left: 100px;
+    top: 35px;
+    z-index: 2;
+    transform: scale(0.9);
+}
+
+.p3 {
+    left: 250px;
+    top: 0;
+    width: 220px;
+    height: 280px;
+    z-index: 5;
+}
+
+.p4 {
+    left: 400px;
+    top: 35px;
+    z-index: 2;
+    transform: scale(0.9);
+}
+
+.p5 {
+    left: 500px;
+    top: 65px;
+    z-index: 1;
+    transform: scale(0.8);
+}
+
+
+.picture:hover,
+.picture:focus-visible,
+.picture:active {
+    z-index: 10;
+}
+
+.picture:focus-visible {
+    outline: 3px solid #5e3f45;
+    outline-offset: 4px;
+}
+
+
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    font: inherit;
+    border: 1px solid #b8c4d2;
+    border-radius: 5px;
+}
+
+
+button { 
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font: inherit;
+    background: #78545B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #997a80 ;
+}
+
+
+footer {
+    background:#d3b6b7; 
+    color: #78545B; 
+    text-align: center; 
+    padding: 18px;
+}
+
+@media screen and (max-width: 768px) {
+
+    main {
+        width: 95%;
+    }
+
+    .container {
+        gap: 15px;
+    }
+
+    .container article {
+        flex: 1 1 220px;
+    }
+
+    .gallery {
+        max-width: 600px;
+        height: 300px;
+    }
+
+    .picture {
+        width: 170px;
+        height: 190px;
+    }
+
+    .p1 {
+        left: 0;
+        top: 60px;
+    }
+
+    .p2 {
+        left: 75px;
+        top: 35px;
+    }
+
+    .p3 {
+        left: 50%;
+        top: 0;
+        width: 190px;
+        height: 240px;
+        transform: translateX(-50%);
+    }
+
+    .p4 {
+        left: auto;
+        right: 75px;
+        top: 35px;
+    }
+
+    .p5 {
+        left: auto;
+        right: 0;
+        top: 60px;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 15px 10px;
+    }
+
+    nav {
+        gap: 5px;
+        padding: 10px 5px;
+    }
+
+    nav a {
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+    
+
+    .container {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .container article {
+        flex: 1 1 100%;
+        padding: 15px;
+    }
+
+    .container img {
+        max-width: 180px;
+    }
+
+    .gallery {
+        width: 100%;
+        height: 170px;
+        overflow: visible;
+        margin-bottom: 20px;
+    }
+
+    .picture {
+        width: 75px;
+        height: 100px;
+    }
+
+    .p1 {
+        left: -10px;
+        top: 35px;
+        transform: scale(0.75);
+    }
+
+    .p2 {
+        left: 8%;
+        top: 20px;
+        transform: scale(0.85);
+    }
+
+    .p3 {
+        left: 50%;
+        top: 0;
+        width: 105px;
+        height: 140px;
+        transform: translateX(-50%);
+    }
+
+    .p4 {
+        left: auto;
+        right: 8%;
+        top: 20px;
+        transform: scale(0.85);
+    }
+
+    .p5 {
+        left: auto;
+        right: -10px;
+        top: 35px;
+        transform: scale(0.75);
+    }
+
+
+    form {
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .picture:hover {
+        z-index: 10;
+    }
+
+    .picture:hover img {
+        transform: scale(1.08);
+    }
+
+}
+
+.picture:focus-visible {
+    z-index: 10;
+    outline: 3px solid #5e3f45;
+    outline-offset: 4px;
+}
+
+.picture:focus-visible img {
+    transform: scale(1.08);
+}
+
+
+.picture:active {
+    z-index: 10;
+}
+
+.picture:active img {
+    transform: scale(1.05);
+}
+
+
+.picture img {
+    transition: transform 0.3s ease;
+}
