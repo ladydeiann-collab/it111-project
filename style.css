@@ -484,16 +484,22 @@ footer {
 
 @media (max-width: 600px) {
     .brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 8px;
     }
 
     .logo {
-        width: 90px;
-        height: 90px;
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+        flex-shrink: 0;
     }
 
     .brand h1 {
-        font-size: 1.8rem;
-        line-height: 1.3;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin: 0;
     }
 }
