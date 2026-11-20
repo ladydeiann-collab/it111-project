@@ -81,6 +81,13 @@ main {
     gap: 25px;
 }
 
+.page-title {
+    text-align: center;
+    color: #78545B;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
 .container {
   display: flex;
   justify-content: space-evenly;
